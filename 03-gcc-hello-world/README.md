@@ -141,3 +141,5 @@ retn                   ; 函数返回
 # main endp
 - endp 是procedure的缩写
 - 函数结束
+# gcc 编译器生成intel语体的汇编列表文件
+- `-S -masm=intel`
