@@ -143,3 +143,13 @@ retn                   ; 函数返回
 - 函数结束
 # gcc 编译器生成intel语体的汇编列表文件
 - `-S -masm=intel`
+# gcc AT&T语体
+比如
+- pushq	%rbp
+```assembly
+	.file	"hello.c"
+	.text
+	.def	printf;	.scl	3;	.type	32;	.endef
+	.seh_proc	printf
+```
+由小数点开头的就是宏
