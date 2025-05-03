@@ -14,6 +14,9 @@
     - [11. **如何选择**](#11-如何选择)
     - [12. **转换工具**](#12-转换工具)
 - [LC0标签](#lc0标签)
+- [x86-64 Windows 调用约定（Microsoft x64 Calling Convention）](#x86-64-windows-调用约定microsoft-x64-calling-convention)
+  - [参数传递优先级](#参数传递优先级)
+  - [浮点参数](#浮点参数)
 
 
 
@@ -190,3 +193,15 @@ Intel 汇编和 AT&T 汇编是两种主要的汇编语言语法格式，主要�
 - .ascii是一个汇编指令，用于在数据段中存储一个 ASCII 字符串。
 - \12 是八进制转义字符，表示换行符（\n），在 ASCII 中对应值为 10
 - \0 是字符串的终止符
+# x86-64 Windows 调用约定（Microsoft x64 Calling Convention）
+## 参数传递优先级
+1. rcx
+2. rdx
+3. r8
+4. r9
+5. 第5个及以上的参数按顺序压入栈、栈上参数需要8字节对
+## 浮点参数
+1. xmm0
+2. xmm1
+3. xmm2
+4. xmm3
